@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
+        @section('pruebas')
+            
+        @endsection
 
         <link rel="shortcut icon" href="./img/BixerLogo2.png">
 
@@ -18,8 +21,6 @@
                 window.top.location = window.self.location;
             }
         </script>
-        <!-- Scripts -->
-        <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
         @routes
         @viteReactRefresh
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
