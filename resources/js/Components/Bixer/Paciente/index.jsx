@@ -6,7 +6,7 @@ import DatePicker from 'react-datepicker';
 import InputError from '@/Components/InputError';
 import 'react-datepicker/dist/react-datepicker.css';
 import { registerLocale, setDefaultLocale } from 'react-datepicker';
-import es from 'date-fns/locale/es';
+import es from 'date-fns/locale/es/index.js';
 
 
 registerLocale('es', es);
