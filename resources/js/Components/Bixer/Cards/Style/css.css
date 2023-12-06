@@ -1,0 +1,112 @@
+.card .face
+{
+    width: 300px;
+    height: 200px;
+    transition: .4s;
+}
+
+.card .face.face1
+{
+    border-radius: 20px;
+    position: relative;
+    background: #310e5e;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.card:hover .face.face1
+{
+    transform: translateY(0);
+    box-shadow: inset 0 0 60px rgba(245, 245, 245, 0.600),
+                inset 20px 0 80px rgba(255, 0, 255, 0.600),
+                inset -20px 0 80px rgba(0, 255, 255, 0.600),
+                inset 20px 0 300px rgba(255, 0, 255, 0.600),
+                inset -20px 0 300px rgba(0, 255, 255, 0.600),
+                0 0 50px #ffffff9c,
+                -10px 0 80px rgba(255, 0, 255, 0.600),
+                10px 0 80px rgba(0, 255, 255, 0.600);
+}
+
+.card .face.face1 .content
+{
+    transition: 0.5s;
+}
+
+.card:hover .face.face1 .content
+{
+    opacity: 1;
+}
+
+.card .face.face1 .content i
+{
+    font-size: 3em;
+    color: #fff;
+    display: inline-block;
+}
+
+.card .face.face1 .content h3
+{
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+}
+
+.card .face.face1 .content a
+{
+    transition: .5s;
+}
+
+.card .face.face2 
+{
+    border-radius: 20px;
+    position: relative;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0);
+    transform: translateY(-100px);
+}
+
+.imagen{
+    width: 150px;
+    height: 5px auto;
+}
+
+.card:hover .face.face2
+{
+    transform: translateY(0);
+}
+
+.card .face.face2 .content p, a
+{
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.card .face.face2 .content a
+{
+    text-decoration: none;
+    color: #111;
+    box-sizing: border-box;
+    outline: 1px solid #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+
+}
+
+.card .face.face2 .content a:hover
+{
+    background: #333;
+    color: #fff;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}

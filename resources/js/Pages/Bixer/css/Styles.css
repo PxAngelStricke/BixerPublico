@@ -1,0 +1,797 @@
+body{
+    font-family: consolas;
+    color: #fff;
+    background-color: #01010f;
+}
+.container{
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin-top: 60px;
+    border: 0.5px solid;
+}
+.containerMain{
+    margin: 0;
+    padding: 250px 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family:consolas;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+    font-family: consolas;
+}
+
+h3{
+    text-align: left;
+    font-size: 16px;
+    font-family: consolas;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+    display: block;
+    color: #fff;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+
+}
+input[type="text"],
+input[type="password"] {
+    width: calc(87% - (46 * .2) );
+    padding: 1em;
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    background: #9d9d9d8e;
+    
+}
+.btn-neon{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 18px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 25px;
+    border: 2px solid #18ead8;
+    margin: 4px;
+}
+.btn-neon:hover{
+    background: #18ead8;
+    box-shadow: 0 0 10px #18ead8, 0 0 40px #18ead8, 0 0 80px #18ead8;
+    transition-delay: 1s;
+    border-radius: 25px;
+ }
+.btn-neon span{
+    position: absolute;
+    display: block;
+    border-radius: 25px;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#18ead8);
+    border-radius: 25px;
+ }
+ .btn-neon:hover #span1{
+    left: 100%;
+    transition: 1s;
+    border-radius: 25px;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#18ead8);
+    border-radius: 25px;
+
+}
+ .btn-neon:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+    border-radius: 25px;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#18ead8);
+    border-radius: 25px;
+}
+.btn-neon:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+    border-radius: 25px;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#18ead8);
+    border-radius: 25px;
+}
+.btn-neon:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+    border-radius: 25px;
+}
+
+.LogoMain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    transform: scale(2.5);
+  }
+
+.btn-neon1{
+    padding: 20px 40px;
+    margin-top: 6rem;
+    color: #fff;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 24px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 25px;
+    border: 2px solid #18ead8;
+    margin: 4px;
+}
+.btn-neon1:hover{
+    background: #18ead8;
+    box-shadow: 0 0 10px #18ead8, 0 0 40px#18ead8, 0 0 80px #18ead8;
+    transition-delay: 1s;
+    border-radius: 25px;
+ }
+.btn-neon1 span{
+    border-radius: 25px;
+}
+#span5{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #18ead8);
+    border-radius: 25px;
+ }
+ .btn-neon1:hover #span5{
+    left: 100%;
+    transition: 1s;
+    border-radius: 25px;
+}
+ #span7{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#18ead8);
+    border-radius: 25px;
+}
+ .btn-neon:hover #span7{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+    border-radius: 25px;
+}
+#span6{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#18ead8);
+    border-radius: 25px;
+}
+.btn-neon1:hover #span6{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+    border-radius: 25px;
+}
+#span8{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#18ead8);
+    border-radius: 25px;
+}
+.btn-neon1:hover #span8{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+    border-radius: 25px;
+}
+.tableUsers{
+    align-items: center;
+    justify-content: space-around;
+    font-size: 1rem;
+    color: #fff;
+    overflow: hidden;
+}
+
+.buttons{
+    margin: 5px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 5% 10%;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 0.8rem;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    input[type="text"],
+    input[type="password"] {
+        padding: 8px;
+    }
+    .btn-neon,
+    .btn-neon1 {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Estilos específicos para pantallas pequeñas (ejemplo: teléfono móvil) */
+@media screen and (max-width: 480px) {
+    .containerMain {
+        padding: 70% 15%;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 0.6rem;
+    }
+    .btn-neon,
+    .btn-neon1 {
+        font-size: 0.7rem;
+        padding: 8px 16px;
+    }
+}
+
+/* ESTILOS DE LA INTERFAZ DE INICIO*/
+
+.container_Inicio {
+    display: flex;
+    width: 1000px;
+    margin: 165px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 0.5px solid;
+}
+
+.card {
+    
+    width: calc(33.33% - 20px); /* Divide el contenedor en tres columnas */
+    margin: 15px;
+}
+
+
+
+/* Estilos específicos para dispositivos más pequeños como móviles */
+@media (max-width: 768px) {
+    .container_Inicio {
+        padding: 5% 30%;  /* Ajusta el espaciado para dispositivos móviles */
+        width: 220px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        width: calc(100% - 10px); /* Ocupa todo el ancho en dispositivos móviles */
+        margin: 0px -35px; /* Espaciado entre las tarjetas en dispositivos móviles */
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .container_Inicio {
+        padding: 5% 10%; /* Ajusta el espaciado para dispositivos móviles */
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .btn-neon1 {
+        font-size: 0.7rem;
+        padding: 8px 16px;
+    }
+    
+    .card {
+        width: calc(70% - 5px); /* Ocupa todo el ancho en dispositivos móviles */
+        margin: 0px -20px ; /* Espaciado entre las tarjetas en dispositivos móviles */
+    }
+
+}
+
+.container_Inicio .card .face
+{
+    width: 300px;
+    height: 200px;
+    transition: .4s;
+}
+
+.container_Inicio .card .face.face1
+{
+    border-radius: 20px;
+    position: relative;
+    background: #310e5e;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+
+.container_Inicio .card:hover .face.face1
+{
+    transform: translateY(0);
+    box-shadow: inset 0 0 60px whitesmoke,
+                inset 20px 0 80px #f0f,
+                inset -20px 0 80px #0ff,
+                inset 20px 0 300px #f0f,
+                inset -20px 0 300px #0ff,
+                0 0 50px #fff,
+                -10px 0 80px #f0f,
+                10px 0 80px #0ff;
+}
+
+.container_Inicio .card .face.face1 .content
+{
+    transition: 0.5s;
+}
+
+.container_Inicio .card:hover .face.face1 .content
+{
+    opacity: 1;
+}
+
+.container_Inicio .card .face.face1 .content i
+{
+    font-size: 3em;
+    color: #fff;
+    display: inline-block;
+}
+
+.container_Inicio .card .face.face1 .content h3
+{
+    font-size: 1em;
+    color: #fff;
+    text-align: center;
+}
+
+.container_Inicio .card .face.face1 .content a
+{
+    transition: .5s;
+}
+
+.container_Inicio .card .face.face2 
+{
+    border-radius: 20px;
+    position: relative;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0);
+    transform: translateY(-100px);
+}
+
+.imagen{
+    width: 150px;
+    height: 5px auto;
+}
+
+.container_Inicio .card:hover .face.face2
+{
+    transform: translateY(0);
+}
+
+.container_Inicio .card .face.face2 .content p, a
+{
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container_Inicio .card .face.face2 .content a
+{
+    text-decoration: none;
+    color: #111;
+    box-sizing: border-box;
+    outline: 1px solid #333;
+    padding: 10px;
+    margin: 15px 0 0;
+    display: inline-block;
+
+}
+
+.container_Inicio .card .face.face2 .content a:hover
+{
+    background: #333;
+    color: #fff;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.bgAnimation{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(20,1fr);
+    grid-template-rows: repeat(20,1fr);
+    background: #01010f;
+    filter: saturate(2);
+    overflow: hidden;
+}
+
+.colorBox{
+    z-index: 2;
+    filter: brightness(1.1);
+    transition: 2s ease;
+    position: relative;
+    margin: 1px;
+    background: #01010f;
+}
+
+.backgroundAmim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: #18ead8;
+    filter: blur(60px);
+    animation: animBack 6s linear infinite;
+}
+
+@keyframes animBack {
+    0%{
+        top: -60px;
+    }
+    100%{
+        top: 120%;
+    }
+}
+
+.imgLogoInic {
+    width: 150px;
+    max-width: 100%; /* Para asegurarte de que la imagen no se desborde del contenedor */
+    margin-top: 20px; /* Espacio entre las tarjetas y la imagen del logo */
+}
+  
+
+  /* ESTILOS DE LA INTERFAZ DE LOGIN*/
+
+  @media screen and (max-width: 768px) {
+    .container {
+        width: 70%;
+        padding: 5% 10%;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 0.8rem;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    input[type="text"],
+    input[type="password"] {
+        padding: 8px;
+        width: 100%;
+    }
+    .btn-neon1 {
+        font-size: 0.8rem;
+        padding: 10px 20px;
+    }
+}
+
+/* Resposividad para pantallas aún más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 70%;
+        padding: 10%;
+    }
+    h2 {
+        font-size: 1.2rem;
+    }
+    h3 {
+        font-size: 0.6rem;
+    }
+    .btn-neon1 {
+        font-size: 0.7rem;
+        padding: 8px 16px;
+    }
+}
+  
+
+  body {
+    font-family: Arial, sans-serif;
+    color: #D9D9D9;
+    background-color: #01010f;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background: #BFBFBF;
+    
+}
+
+.btn {
+    display: block;
+    width: 50%;
+    height: 50px;
+    padding: 10px;
+    background-color: #18EAD8;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 100%;
+    margin: 0 auto; /* Esto centra horizontalmente el botón */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+ .textLog{
+    color: #18EAD8;
+ }
+
+ 
+
+ /* ESTILOS DE LA INTERFAZ DE REGISTRO */
+
+ .container_Reg {
+    width: 300px;
+    margin: 0 auto;
+    padding: 50px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    border-radius: 35px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+    border: 0.5px solid;
+}
+
+h2 {
+    text-align: center;
+    font-size: 35px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 15px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    background: #BFBFBF;
+    
+}
+
+.btn {
+    display: block;
+    width: 50%;
+    height: 50px;
+    padding: 10px;
+    background-color: #18EAD8;
+    color: #fff;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 100%;
+    margin: 0 auto; /* Esto centra horizontalmente el botón */
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.ImgLogo{
+    width: 50%;
+    max-width: 100px;
+    display: block;
+    margin: 0 auto;
+}
+ .textLog{
+    color: #18EAD8;
+ }
+
+ /* ESTILOS DE LAS INTERFACES DE PACIENTES*/
+
+ .tablePacientes{
+    padding: 10px 10%;
+    box-sizing: border-box;
+    border-radius: 7px;
+    width: 100%;
+}
+
+.tablePacientes > *{
+    padding: 0.1rem;
+    margin: 1rem auto;
+    display: flex;
+    width: 100%;
+}
+
+@media(max-width: 720px) {
+    .tablePacientes{
+        width: 45%;
+    }
+}
+
+.btn-neon1{
+    position: relative;
+    display: inline-block;
+    align-items: center;
+    padding: 15px 40px;
+    color: #fff;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-size: 18px;
+    overflow: hidden;
+    transition: 0.2s;
+    border-radius: 25px;
+}
+.btn-neon1:hover{
+    background: #18ead8;
+    box-shadow: 0 0 10px #18ead8, 0 0 40px #18ead8, 0 0 80px #18ead8;
+    transition-delay: 1s;
+    border-radius: 25px;
+ }
+.btn-neon1 span{
+    position: absolute;
+    display: block;
+    border-radius: 25px;
+}
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent,#18ead8);
+    border-radius: 25px;
+ }
+ .btn-neon1:hover #span1{
+    left: 100%;
+    transition: 1s;
+    border-radius: 25px;
+}
+ #span3{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent,#18ead8);
+    border-radius: 25px;
+
+}
+ .btn-neon1:hover #span3{
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.5s;
+    border-radius: 25px;
+}
+#span2{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#18ead8);
+    border-radius: 25px;
+}
+.btn-neon1:hover #span2{
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+    border-radius: 25px;
+}
+#span4{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#18ead8);
+    border-radius: 25px;
+}
+.btn-neon1:hover #span4{
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+    border-radius: 25px;
+}
+
+.no-resizable {     
+    resize: none;   
+}
