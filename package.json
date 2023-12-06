@@ -3,7 +3,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite",
-        "build": "vite build"
+        "build": "vite build && vite build --ssr"
     },
     "devDependencies": {
         "@headlessui/react": "^1.4.2",
@@ -20,6 +20,7 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "@jridgewell/sourcemap-codec": "^1.4.15",
         "@mui/x-date-pickers": "^6.18.1",
         "chart.js": "^4.4.0",
         "chartjs-plugin-zoom": "^2.0.1",

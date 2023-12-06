@@ -1,11 +1,9 @@
 import React from 'react';
 import pdfMake from 'pdfmake/build/pdfmake';
-import pdfFonts from 'pdfmake/build/vfs_fonts';
 import Boton from '../Boton';
 import { format } from 'date-fns';
 
 // Configura pdfMake con las fuentes
-pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 class PDFGenerator extends React.Component {
   generatePDF = () => {
