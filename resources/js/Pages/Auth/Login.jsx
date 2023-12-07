@@ -87,7 +87,7 @@ export default function Login({ status, canResetPassword }) {
                 <div className='flex items-center justify-center'>
                     <div className='grid space-y-3'>
                         <p>¿No tienes una cuenta? <a href={route('register')}><p className='underline text-[#18ead8]'>Registrate aquí</p></a></p>
-                        <a href={route('bienvenida')}><img className='mx-auto w-24 h-24' src="./img/BixerLogo2.png" alt="" /></a>
+                        <a href={route('bienvenida')}><img className='mx-auto w-24 h-24' src="./img/BixerLogo2.webp" alt="" /></a>
                     </div>
                 </div>
             </Contenedor>

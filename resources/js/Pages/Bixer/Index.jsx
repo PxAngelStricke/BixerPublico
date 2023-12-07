@@ -13,7 +13,7 @@ function Index() {
         </Head>
         <main className='flex items-center justify-center h-screen'>
           <div className='text-center'>
-            <img className='mx-auto mb-5' src="./img/BixerLogo.png" alt="Logo Bixer" />
+            <img className='mx-auto mb-5' src="./img/BixerLogo.webp" alt="Logo Bixer" />
             <Boton url={route('login')} text='Inicio'/>
           </div>
         </main>

@@ -38,7 +38,7 @@ function Registro() {
                     <Boton url='sesion' text='Registrate'/>
                 </form>
 
-                <img className='mx-auto w-24 h-24' src="./img/BixerLogo2.png" alt="Logo Bixer" />
+                <img className='mx-auto w-24 h-24' src="./img/BixerLogo2.webp" alt="Logo Bixer" />
             </Contenedor>
         </main>
     </>

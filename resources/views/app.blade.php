@@ -9,7 +9,7 @@
             
         @endsection
 
-        <link rel="shortcut icon" href="./img/BixerLogo2.png">
+        <link rel="shortcut icon" href="./img/BixerLogo2.webp">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">

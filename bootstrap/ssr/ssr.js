@@ -18,7 +18,7 @@ import es from "date-fns/locale/es/index.js";
 import createServer from "@inertiajs/react/server";
 import ReactDOMServer from "react-dom/server";
 function ApplicationLogo(props) {
-  return /* @__PURE__ */ jsx(Fragment, { children: /* @__PURE__ */ jsx("img", { src: "./img/BixerLogo2.png", className: "mx-auto w-32 h-32", alt: "" }) });
+  return /* @__PURE__ */ jsx(Fragment, { children: /* @__PURE__ */ jsx("img", { src: "./img/BixerLogo2.webp", className: "mx-auto w-32 h-32", alt: "" }) });
 }
 function Guest({ children }) {
   return /* @__PURE__ */ jsxs("div", { className: "min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0", children: [
@@ -241,7 +241,7 @@ function Login$1({ status, canResetPassword }) {
           "¿No tienes una cuenta? ",
           /* @__PURE__ */ jsx("a", { href: route("register"), children: /* @__PURE__ */ jsx("p", { className: "underline text-[#18ead8]", children: "Registrate aquí" }) })
         ] }),
-        /* @__PURE__ */ jsx("a", { href: route("bienvenida"), children: /* @__PURE__ */ jsx("img", { className: "mx-auto w-24 h-24", src: "./img/BixerLogo2.png", alt: "" }) })
+        /* @__PURE__ */ jsx("a", { href: route("bienvenida"), children: /* @__PURE__ */ jsx("img", { className: "mx-auto w-24 h-24", src: "./img/BixerLogo2.webp", alt: "" }) })
       ] }) })
     ] }) })
   ] });
@@ -436,7 +436,7 @@ function Register() {
         capchatIsDone && /* @__PURE__ */ jsx(Boton, { type: "submit", text: "Registrate" })
       ] }),
       /* @__PURE__ */ jsx(Boton, { url: route("login"), text: "Regresar" }),
-      /* @__PURE__ */ jsx("img", { className: "mx-auto w-24 h-24", src: "./img/BixerLogo2.png", alt: "Logo Bixer" })
+      /* @__PURE__ */ jsx("img", { className: "mx-auto w-24 h-24", src: "./img/BixerLogo2.webp", alt: "Logo Bixer" })
     ] }) })
   ] });
 }
@@ -1378,7 +1378,7 @@ function Index() {
       /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
     ] }),
     /* @__PURE__ */ jsx("main", { className: "flex items-center justify-center h-screen", children: /* @__PURE__ */ jsxs("div", { className: "text-center", children: [
-      /* @__PURE__ */ jsx("img", { className: "mx-auto mb-5", src: "./img/BixerLogo.png", alt: "Logo Bixer" }),
+      /* @__PURE__ */ jsx("img", { className: "mx-auto mb-5", src: "./img/BixerLogo.webp", alt: "Logo Bixer" }),
       /* @__PURE__ */ jsx(Boton, { url: route("login"), text: "Inicio" })
     ] }) })
   ] });
@@ -1477,7 +1477,7 @@ function Authenticated({ user, header, children }) {
   return /* @__PURE__ */ jsxs("div", { className: "min-h-screen", children: [
     /* @__PURE__ */ jsxs("nav", { className: "mb-3", children: [
       /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8", children: /* @__PURE__ */ jsxs("div", { className: "flex justify-between h-16", children: [
-        /* @__PURE__ */ jsx("div", { className: "flex mt-3", children: /* @__PURE__ */ jsx("div", { className: "shrink-0 flex items-center", children: /* @__PURE__ */ jsx(Link, { href: "inicio", children: /* @__PURE__ */ jsx("img", { src: "./img/BixerLogo2.png", className: "block h-20 mt-3 w-auto fill-current", alt: "" }) }) }) }),
+        /* @__PURE__ */ jsx("div", { className: "flex mt-3", children: /* @__PURE__ */ jsx("div", { className: "shrink-0 flex items-center", children: /* @__PURE__ */ jsx(Link, { href: "inicio", children: /* @__PURE__ */ jsx("img", { src: "./img/BixerLogo2.webp", className: "block h-20 mt-3 w-auto fill-current", alt: "" }) }) }) }),
         /* @__PURE__ */ jsx("div", { className: "hidden sm:flex sm:items-center sm:ml-6", children: /* @__PURE__ */ jsx("div", { className: "ml-3 relative", children: /* @__PURE__ */ jsxs(Dropdown, { children: [
           /* @__PURE__ */ jsx(Dropdown.Trigger, { children: /* @__PURE__ */ jsx("span", { className: "inline-flex rounded-md", children: /* @__PURE__ */ jsxs(
             "button",
@@ -1565,8 +1565,8 @@ function Inicio({ auth }) {
       /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
     ] }),
     /* @__PURE__ */ jsx("div", { className: "flex justify-center items-center xl:py-20", children: /* @__PURE__ */ jsx(Contenedor, { children: /* @__PURE__ */ jsxs("div", { className: "flex flex-col justify-center px-3 items-center lg:flex-row lg:space-x-8", children: [
-      /* @__PURE__ */ jsx(Card, { img: "./img/Pacientes.png", text: "Pacientes", description: "Gestionar pacientes", url: "pacientes" }),
-      /* @__PURE__ */ jsx(Card, { img: "./img/Graph.png", text: "Graficador", description: "Iniciar un muestreo", url: "graficador" })
+      /* @__PURE__ */ jsx(Card, { img: "./img/Pacientes.webp", text: "Pacientes", description: "Gestionar pacientes", url: "pacientes" }),
+      /* @__PURE__ */ jsx(Card, { img: "./img/Graph.webp", text: "Graficador", description: "Iniciar un muestreo", url: "graficador" })
     ] }) }) })
   ] }) });
 }
@@ -1596,7 +1596,7 @@ function Login() {
         "¿No tienes una cuenta? ",
         /* @__PURE__ */ jsx("a", { href: "registro", className: "underline text-[#18ead8]", children: "Registrate aquí" })
       ] }),
-      /* @__PURE__ */ jsx("img", { className: "mx-auto w-24 h-24", src: "./img/BixerLogo2.png", alt: "" })
+      /* @__PURE__ */ jsx("img", { className: "mx-auto w-24 h-24", src: "./img/BixerLogo2.webp", alt: "" })
     ] }) })
   ] });
 }
@@ -2137,7 +2137,7 @@ function Registro() {
         /* @__PURE__ */ jsx("input", { className: "mx-5 mb-10 rounded-md text-black", type: "text", placeholder: "Numero de telefono", id: "telefono", name: "telefono" }),
         /* @__PURE__ */ jsx(Boton, { url: "sesion", text: "Registrate" })
       ] }),
-      /* @__PURE__ */ jsx("img", { className: "mx-auto w-24 h-24", src: "./img/BixerLogo2.png", alt: "Logo Bixer" })
+      /* @__PURE__ */ jsx("img", { className: "mx-auto w-24 h-24", src: "./img/BixerLogo2.webp", alt: "Logo Bixer" })
     ] }) })
   ] });
 }
