@@ -7,6 +7,7 @@ var __publicField = (obj, key, value) => {
 import { jsx, Fragment, jsxs } from "react/jsx-runtime";
 import React, { forwardRef, useRef, useEffect, useState, createContext, useContext, Fragment as Fragment$1 } from "react";
 import { Link, useForm, Head as Head$1, usePage, createInertiaApp } from "@inertiajs/react";
+import ReCAPTCHA from "react-google-recaptcha";
 import pdfMake from "pdfmake/build/pdfmake.js";
 import { format } from "date-fns";
 import { Line } from "react-chartjs-2";
@@ -175,7 +176,12 @@ function Login$1({ status, canResetPassword }) {
     post(route("login"));
   };
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head$1, { title: "Iniciar sesion" }),
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Login" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "La aplicacion web de goniometría Bixer esta destinada a profesionistas y espcialistas con cedula profesional; con el objetivo de proporcionarles una herramienta para maximizar sus precisión al diagnosticar." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "menu, menu principa, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx("main", { className: "flex items-center justify-center h-screen", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold", children: "Iniciar sesión" }),
       /* @__PURE__ */ jsx("p", { children: "Porfavor, ingresa tus datos" }),
@@ -264,7 +270,19 @@ function Register() {
     e.preventDefault();
     post(route("register"));
   };
+  const key = "6LceOiopAAAAAETuhhN3lD4OLDys4mgmplcNpL6D";
+  const [capchatIsDone, setCaptchaDone] = useState(false);
+  function onChange() {
+    console.log("changed");
+    setCaptchaDone(true);
+  }
   return /* @__PURE__ */ jsxs(Fragment, { children: [
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Registro" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "La aplicacion web de goniometría Bixer esta destinada a profesionistas y espcialistas con cedula profesional; con el objetivo de proporcionarles una herramienta para maximizar sus precisión al diagnosticar." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "registro, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx(Head$1, { title: "Registro" }),
     /* @__PURE__ */ jsx("main", { className: "flex items-center justify-center py-5", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold", children: "Registro" }),
@@ -408,7 +426,14 @@ function Register() {
           ),
           /* @__PURE__ */ jsx(InputError, { message: errors.specialty, className: "mt-2" })
         ] }),
-        /* @__PURE__ */ jsx(Boton, { type: "submit", text: "Registrate" })
+        /* @__PURE__ */ jsx("div", { className: "mt-3 flex items-center justify-center", children: /* @__PURE__ */ jsx(
+          ReCAPTCHA,
+          {
+            sitekey: key,
+            onChange
+          }
+        ) }),
+        capchatIsDone && /* @__PURE__ */ jsx(Boton, { type: "submit", text: "Registrate" })
       ] }),
       /* @__PURE__ */ jsx(Boton, { url: route("login"), text: "Regresar" }),
       /* @__PURE__ */ jsx("img", { className: "mx-auto w-24 h-24", src: "./img/BixerLogo2.png", alt: "Logo Bixer" })

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import GuestLayout from '@/Layouts/GuestLayout';
 import InputError from '@/Components/InputError';
 import InputLabel from '@/Components/InputLabel';
@@ -7,6 +7,7 @@ import TextInput from '@/Components/TextInput';
 import { Head, Link, useForm } from '@inertiajs/react';
 import Contenedor from '@/Components/Bixer/Contenedor';
 import Boton from '@/Components/Bixer/Boton';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function Register() {
     const { data, setData, post, processing, errors, reset } = useForm({
@@ -31,6 +32,15 @@ export default function Register() {
 
         post(route('register'));
     };
+
+    const key = '6LceOiopAAAAAETuhhN3lD4OLDys4mgmplcNpL6D'
+
+    const [capchatIsDone, setCaptchaDone] = useState(false)
+
+    function onChange() {
+        console.log('changed')
+        setCaptchaDone(true)
+    }
 
     return (
         <>
@@ -166,7 +176,14 @@ export default function Register() {
                         <InputError message={errors.specialty} className='mt-2'/>
                     </div>
 
-                    <Boton type='submit' text='Registrate'/>
+                    <div className='mt-3 flex items-center justify-center'>
+                        <ReCAPTCHA
+                            sitekey={key}
+                            onChange={onChange}
+                        />
+                    </div>
+                    { capchatIsDone && <Boton type='submit' text='Registrate'/>}
+                    
                     </form>
                     <Boton url={route('login')} text='Regresar'/>
                 <img className='mx-auto w-24 h-24' src="./img/BixerLogo2.png" alt="Logo Bixer" />
