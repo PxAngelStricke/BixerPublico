@@ -102,6 +102,12 @@ function Pruebas() {
   return (
     <>
     <main className='flex justify-center items-center py-5'>
+        <Head>
+            <title>Software de goniometria: Pruebas</title>
+            <meta name="description" content="Esta ventana es privada y de uso exclusivo a usuarios con rol developer." />
+            <meta name="keywords" content="pruebas, prueba, desarrollo, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" />
+            <meta name="author" content="byLastLine_" />
+        </Head>
         <Contenedor>
           
           <LinesChart ejex={ejex} ejey={ejey} onChartImageReady={handleChartImageReady}/>

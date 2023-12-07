@@ -149,7 +149,12 @@ function Graficador({paciente, auth}) {
                     
   return (
     <>
-    <Head title='Graficador'/>
+    <Head>
+        <title>Software de goniometria: Graficador</title>
+        <meta name="description" content="El graficador de la aplicacion web de goniometría de Bixer grafica en tiempo real las medidas generadas y enviadas desde el goniómetro digital Bixer, facilitando asi la precisión del diagnóstico y seguimiento." />
+        <meta name="keywords" content="goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" />
+        <meta name="author" content="byLastLine_" />
+    </Head>
 
     <main className='flex justify-center items-center py-5'>
         <Contenedor>

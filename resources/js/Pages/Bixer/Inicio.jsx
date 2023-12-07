@@ -11,7 +11,12 @@ function Inicio({ auth }) {
     <>
     <AuthenticatedLayout user={auth.user}>
 
-      <Head title='Inicio'/>
+    <Head>
+        <title>Software de goniometria: Menu principal</title>
+        <meta name="description" content="La aplicación web de goniometría de Bixer es posible gestionar pacientes y graficar en tiempo real los movimientos realizados durante la sesión de fisioterapia o rehabilitación." />
+        <meta name="keywords" content="menu, menu principal, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" />
+        <meta name="author" content="byLastLine_" />
+    </Head>
       <div className='flex justify-center items-center xl:py-20'>
         <Contenedor>
           <div className='flex flex-col justify-center px-3 items-center lg:flex-row lg:space-x-8'>

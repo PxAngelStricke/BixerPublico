@@ -54,7 +54,12 @@ function Pacientes({ pacientes }) {
 
   return (
     <>
-        <Head title='Pacientes'/>
+        <Head>
+        <title>Software de goniometria: Pacientes</title>
+        <meta name="description" content="La aplicación web de goniometría de Bixer es posible gestionar pacientes; permitiendo registrar, editar y elimanr pacientes para facilitar el proceso de la consulta" />
+        <meta name="keywords" content="pacientes, paciente, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" />
+        <meta name="author" content="byLastLine_" />
+    </Head>
         <main className='flex justify-center items-center py-5'>
             <Contenedor>
                 <h1 className='text-4xl font-bold mb-5'>{adding ? "Agregar paciente" : "Pacientes"}</h1>

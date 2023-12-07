@@ -6,7 +6,12 @@ import Boton from '@/Components/Bixer/Boton'
 function Registro() {
   return (
     <>
-        <Head title='Registro'/>
+        <Head>
+          <title>Software de goniometria: Registro</title>
+          <meta name="description" content="La aplicacion web de goniometría Bixer esta destinada a profesionistas y espcialistas con cedula profesional; con el objetivo de proporcionarles una herramienta para maximizar sus precisión al diagnosticar." />
+          <meta name="keywords" content="registro, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" />
+          <meta name="author" content="byLastLine_" />
+      </Head>
         <main className='container mx-auto text-center py-5'>
             <Contenedor>
                 <h1 className='text-4xl font-bold'>Registro</h1>
