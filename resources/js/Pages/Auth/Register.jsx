@@ -34,6 +34,12 @@ export default function Register() {
 
     return (
         <>
+        <Head>
+          <title>Software de goniometria: Registro</title>
+          <meta name="description" content="La aplicacion web de goniometría Bixer esta destinada a profesionistas y espcialistas con cedula profesional; con el objetivo de proporcionarles una herramienta para maximizar sus precisión al diagnosticar." />
+          <meta name="keywords" content="registro, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" />
+          <meta name="author" content="byLastLine_" />
+        </Head>
         <Head title='Registro'/>
         <main className='flex items-center justify-center py-5'>
             <Contenedor>

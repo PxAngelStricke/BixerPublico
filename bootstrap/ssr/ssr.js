@@ -6,7 +6,7 @@ var __publicField = (obj, key, value) => {
 };
 import { jsx, Fragment, jsxs } from "react/jsx-runtime";
 import React, { forwardRef, useRef, useEffect, useState, createContext, useContext, Fragment as Fragment$1 } from "react";
-import { Link, useForm, Head, usePage, createInertiaApp } from "@inertiajs/react";
+import { Link, useForm, Head as Head$1, usePage, createInertiaApp } from "@inertiajs/react";
 import pdfMake from "pdfmake/build/pdfmake.js";
 import { format } from "date-fns";
 import { Line } from "react-chartjs-2";
@@ -73,7 +73,7 @@ function ConfirmPassword() {
     post(route("password.confirm"));
   };
   return /* @__PURE__ */ jsxs(Guest, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Confirm Password" }),
+    /* @__PURE__ */ jsx(Head$1, { title: "Confirm Password" }),
     /* @__PURE__ */ jsx("div", { className: "mb-4 text-sm text-gray-600 dark:text-gray-400", children: "This is a secure area of the application. Please confirm your password before continuing." }),
     /* @__PURE__ */ jsxs("form", { onSubmit: submit, children: [
       /* @__PURE__ */ jsxs("div", { className: "mt-4", children: [
@@ -109,7 +109,7 @@ function ForgotPassword({ status }) {
     post(route("password.email"));
   };
   return /* @__PURE__ */ jsxs(Guest, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Forgot Password" }),
+    /* @__PURE__ */ jsx(Head$1, { title: "Forgot Password" }),
     /* @__PURE__ */ jsx("div", { className: "mb-4 text-sm text-gray-600 dark:text-gray-400", children: "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one." }),
     status && /* @__PURE__ */ jsx("div", { className: "mb-4 font-medium text-sm text-green-600 dark:text-green-400", children: status }),
     /* @__PURE__ */ jsxs("form", { onSubmit: submit, children: [
@@ -175,7 +175,7 @@ function Login$1({ status, canResetPassword }) {
     post(route("login"));
   };
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Iniciar sesion" }),
+    /* @__PURE__ */ jsx(Head$1, { title: "Iniciar sesion" }),
     /* @__PURE__ */ jsx("main", { className: "flex items-center justify-center h-screen", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold", children: "Iniciar sesión" }),
       /* @__PURE__ */ jsx("p", { children: "Porfavor, ingresa tus datos" }),
@@ -265,7 +265,7 @@ function Register() {
     post(route("register"));
   };
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Registro" }),
+    /* @__PURE__ */ jsx(Head$1, { title: "Registro" }),
     /* @__PURE__ */ jsx("main", { className: "flex items-center justify-center py-5", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold", children: "Registro" }),
       /* @__PURE__ */ jsx("p", { children: "Porfavor, ingresa tus datos" }),
@@ -436,7 +436,7 @@ function ResetPassword({ token, email }) {
     post(route("password.store"));
   };
   return /* @__PURE__ */ jsxs(Guest, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Reset Password" }),
+    /* @__PURE__ */ jsx(Head$1, { title: "Reset Password" }),
     /* @__PURE__ */ jsxs("form", { onSubmit: submit, children: [
       /* @__PURE__ */ jsxs("div", { children: [
         /* @__PURE__ */ jsx(InputLabel, { htmlFor: "email", value: "Email" }),
@@ -501,7 +501,7 @@ function VerifyEmail({ status }) {
     post(route("verification.send"));
   };
   return /* @__PURE__ */ jsxs(Guest, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Verificacion de email" }),
+    /* @__PURE__ */ jsx(Head$1, { title: "Verificacion de email" }),
     /* @__PURE__ */ jsx("div", { className: "mb-4 text-sm text-gray-600 dark:text-gray-400", children: "Gracias por registrarte! Antes de comenzar, ¿podría verificar su dirección de correo electrónico haciendo clic en el enlace que le acabamos de enviar por correo electrónico? Si no recibió el correo electrónico, con gusto le enviaremos otro." }),
     status === "verification-link-sent" && /* @__PURE__ */ jsx("div", { className: "mb-4 font-medium text-sm text-green-600 dark:text-green-400", children: "Se ha enviado un nuevo enlace de verificación a la dirección de correo electrónico que proporcionó durante el registro." }),
     /* @__PURE__ */ jsx("form", { onSubmit: submit, children: /* @__PURE__ */ jsxs("div", { className: "mt-4 flex items-center justify-between space-x-5", children: [
@@ -1287,7 +1287,12 @@ function Graficador({ paciente, auth }) {
     );
   }
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Graficador" }),
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "El graficador de la aplicacion web de goniometría de Bixer grafica en tiempo real las medidas generadas y enviadas desde el goniómetro digital Bixer, facilitando asi la precisión del diagnóstico y seguimiento." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx("main", { className: "flex justify-center items-center py-5", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold", children: "Graficador" }),
       /* @__PURE__ */ jsx(LinesChart, { ejex, ejey, onChartImageReady: handleChartImageReady }),
@@ -1341,7 +1346,12 @@ const __vite_glob_0_6 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
 }, Symbol.toStringTag, { value: "Module" }));
 function Index() {
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Bienvenido" }),
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Inicio" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "Bixer es una aplicación web de gestión y graficación avanzada en tiempo real de los datos recabados por el goniómetro digital Bixer; con el objetivo de facilitar el seguimiento a los casos clinicos de los fisioterapeutas." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "inicio, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx("main", { className: "flex items-center justify-center h-screen", children: /* @__PURE__ */ jsxs("div", { className: "text-center", children: [
       /* @__PURE__ */ jsx("img", { className: "mx-auto mb-5", src: "./img/BixerLogo.png", alt: "Logo Bixer" }),
       /* @__PURE__ */ jsx(Boton, { url: route("login"), text: "Inicio" })
@@ -1523,7 +1533,12 @@ function Authenticated({ user, header, children }) {
 }
 function Inicio({ auth }) {
   return /* @__PURE__ */ jsx(Fragment, { children: /* @__PURE__ */ jsxs(Authenticated, { user: auth.user, children: [
-    /* @__PURE__ */ jsx(Head, { title: "Inicio" }),
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Menu principal" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "La aplicación web de goniometría de Bixer es posible gestionar pacientes y graficar en tiempo real los movimientos realizados durante la sesión de fisioterapia o rehabilitación." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "menu, menu principal, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx("div", { className: "flex justify-center items-center xl:py-20", children: /* @__PURE__ */ jsx(Contenedor, { children: /* @__PURE__ */ jsxs("div", { className: "flex flex-col justify-center px-3 items-center lg:flex-row lg:space-x-8", children: [
       /* @__PURE__ */ jsx(Card, { img: "./img/Pacientes.png", text: "Pacientes", description: "Gestionar pacientes", url: "pacientes" }),
       /* @__PURE__ */ jsx(Card, { img: "./img/Graph.png", text: "Graficador", description: "Iniciar un muestreo", url: "graficador" })
@@ -1536,7 +1551,12 @@ const __vite_glob_0_8 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
 }, Symbol.toStringTag, { value: "Module" }));
 function Login() {
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Login" }),
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Login" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "La aplicacion web de goniometría Bixer esta destinada a profesionistas y espcialistas con cedula profesional; con el objetivo de proporcionarles una herramienta para maximizar sus precisión al diagnosticar." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "menu, menu principa, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx("main", { className: "container mx-auto", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold", children: "Iniciar sesión" }),
       /* @__PURE__ */ jsx("p", { children: "Porfavor, ingresa tus datos" }),
@@ -1809,7 +1829,12 @@ function Pacientes({ pacientes }) {
     setSelectedDate(null);
   };
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Pacientes" }),
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Pacientes" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "La aplicación web de goniometría de Bixer es posible gestionar pacientes; permitiendo registrar, editar y elimanr pacientes para facilitar el proceso de la consulta" }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "pacientes, paciente, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx("main", { className: "flex justify-center items-center py-5", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold mb-5", children: adding ? "Agregar paciente" : "Pacientes" }),
       adding === false && /* @__PURE__ */ jsxs("div", { className: "lg:flex text-left grid gap-4", children: [
@@ -2040,14 +2065,22 @@ function Pruebas() {
       }
     };
   }, [muestreoActivo, characteristicBLE]);
-  return /* @__PURE__ */ jsx(Fragment, { children: /* @__PURE__ */ jsx("main", { className: "flex justify-center items-center py-5", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
-    /* @__PURE__ */ jsx(LinesChart, { ejex, ejey, onChartImageReady: handleChartImageReady }),
-    /* @__PURE__ */ jsx(Boton, { onClick: handleBluetoothBtn, text: bluetoothConnected ? "desconectar" : "conectar" }),
-    bluetoothConnected && /* @__PURE__ */ jsxs(Fragment, { children: [
-      /* @__PURE__ */ jsx(Boton, { onClick: toggleMuestreo, text: muestreoActivo ? "pausar muestreo" : "iniciar muestreo" }),
-      /* @__PURE__ */ jsx(Boton, { onClick: eliminarMuestreo, text: "eliminar muestreo" })
+  return /* @__PURE__ */ jsx(Fragment, { children: /* @__PURE__ */ jsxs("main", { className: "flex justify-center items-center py-5", children: [
+    /* @__PURE__ */ jsxs(Head, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Pruebas" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "Esta ventana es privada y de uso exclusivo a usuarios con rol developer." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "pruebas, prueba, desarrollo, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
+    /* @__PURE__ */ jsxs(Contenedor, { children: [
+      /* @__PURE__ */ jsx(LinesChart, { ejex, ejey, onChartImageReady: handleChartImageReady }),
+      /* @__PURE__ */ jsx(Boton, { onClick: handleBluetoothBtn, text: bluetoothConnected ? "desconectar" : "conectar" }),
+      bluetoothConnected && /* @__PURE__ */ jsxs(Fragment, { children: [
+        /* @__PURE__ */ jsx(Boton, { onClick: toggleMuestreo, text: muestreoActivo ? "pausar muestreo" : "iniciar muestreo" }),
+        /* @__PURE__ */ jsx(Boton, { onClick: eliminarMuestreo, text: "eliminar muestreo" })
+      ] })
     ] })
-  ] }) }) });
+  ] }) });
 }
 const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
@@ -2055,7 +2088,12 @@ const __vite_glob_0_11 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
 }, Symbol.toStringTag, { value: "Module" }));
 function Registro() {
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Registro" }),
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Registro" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "La aplicacion web de goniometría Bixer esta destinada a profesionistas y espcialistas con cedula profesional; con el objetivo de proporcionarles una herramienta para maximizar sus precisión al diagnosticar." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "registro, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx("main", { className: "container mx-auto text-center py-5", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold", children: "Registro" }),
       /* @__PURE__ */ jsx("p", { children: "Porfavor, ingresa tus datos" }),
@@ -2084,7 +2122,12 @@ const __vite_glob_0_12 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
 }, Symbol.toStringTag, { value: "Module" }));
 function Usuario() {
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Usuario" }),
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Usuario" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "La aplicacion web de goniometría Bixer esta destinada a profesionistas y espcialistas con cedula profesional; con el objetivo de proporcionarles una herramienta para maximizar sus precisión al diagnosticar." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "menu, usuario, perfil, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx("main", { className: "container mx-auto text-center py-12", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold mb-5", children: "Usuario" }),
       /* @__PURE__ */ jsxs("form", { action: "", className: "grid gap-4 text-left", children: [
@@ -2115,7 +2158,7 @@ function Dashboard({ auth }) {
       user: auth.user,
       header: /* @__PURE__ */ jsx("h2", { className: "font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight", children: "Dashboard" }),
       children: [
-        /* @__PURE__ */ jsx(Head, { title: "Dashboard" }),
+        /* @__PURE__ */ jsx(Head$1, { title: "Dashboard" }),
         /* @__PURE__ */ jsx("div", { className: "py-12", children: /* @__PURE__ */ jsx("div", { className: "max-w-7xl mx-auto sm:px-6 lg:px-8", children: /* @__PURE__ */ jsx("div", { className: "bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg", children: /* @__PURE__ */ jsx("div", { className: "p-6 text-gray-900 dark:text-gray-100", children: "You're logged in!" }) }) }) })
       ]
     }
@@ -2480,7 +2523,7 @@ function Edit({ auth, mustVerifyEmail, status }) {
     {
       user: auth.user,
       children: [
-        /* @__PURE__ */ jsx(Head, { title: "Profile" }),
+        /* @__PURE__ */ jsx(Head$1, { title: "Profile" }),
         /* @__PURE__ */ jsx("div", { className: "py-12", children: /* @__PURE__ */ jsxs("div", { className: "max-w-7xl mx-auto sm:px-6 lg:px-8 space-y-6", children: [
           /* @__PURE__ */ jsx("div", { className: "p-4 sm:p-8 bg-white dark:bg-gray-800 shadow sm:rounded-lg", children: /* @__PURE__ */ jsx(
             UpdateProfileInformation,
@@ -2503,7 +2546,7 @@ const __vite_glob_0_15 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.de
 }, Symbol.toStringTag, { value: "Module" }));
 function Welcome({ auth, laravelVersion, phpVersion }) {
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head, { title: "Welcome" }),
+    /* @__PURE__ */ jsx(Head$1, { title: "Welcome" }),
     /* @__PURE__ */ jsxs("div", { className: "relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white", children: [
       /* @__PURE__ */ jsx("div", { className: "sm:fixed sm:top-0 sm:right-0 p-6 text-right", children: auth.user ? /* @__PURE__ */ jsx(
         Link,
