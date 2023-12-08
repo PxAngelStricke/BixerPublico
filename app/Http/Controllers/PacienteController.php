@@ -12,11 +12,10 @@ class PacienteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request)
+    public function index()
     {
         return Inertia::render('Bixer/Pacientes', [
-            //'pacientes' => Paciente::with('user:id,name')->latest()->get()
-            'pacientes' => Paciente::where('user_id', $request->input('user'))->with('user:id,name')->latest()->get()
+            'pacientes' => Paciente::with('user:id,name')->latest()->get()
         ]);
     }
 
