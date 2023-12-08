@@ -69,7 +69,7 @@
     transition-delay: 0.25s;
 }
 
-a:link, a:visited, a:active, button:link, button:visited, button:active, span:link, link:visited, link:active {
+a:link, a:visited, a:active, button:link, button:visited, button:active, span:link, span:visited, span:active, link:link, link:visited, link:active {
     text-decoration: none;
     color: white;
 }

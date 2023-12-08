@@ -11,7 +11,7 @@ import es from 'date-fns/locale/es/index.js';
 
 registerLocale('es', es);
 
-function Paciente({ paciente }) {
+function Paciente({ paciente, auth }) {
     /* FECHA */
     const [selectedDate, setSelectedDate] = useState(null);
     const [dateString, setDateString] = useState('');
@@ -38,7 +38,8 @@ function Paciente({ paciente }) {
         CURP: paciente.CURP,
         weight: paciente.weight,
         height: paciente.height,
-        date_birth: paciente.date_birth
+        date_birth: paciente.date_birth,
+        userid: auth.user.id,
     })
 
     const handleUpdate = (e) => {

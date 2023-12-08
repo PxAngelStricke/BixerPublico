@@ -11,7 +11,7 @@ import Paciente from '@/Components/Bixer/Paciente';
 
 registerLocale('es', es);
 
-function Pacientes({ pacientes }) {
+function Pacientes({ pacientes, auth }) {
     /* FECHA */
     const [selectedDate, setSelectedDate] = useState(null);
     const [dateString, setDateString] = useState('');
@@ -36,7 +36,8 @@ function Pacientes({ pacientes }) {
         CURP: '',
         weight: '',
         height: '',
-        date_birth: ''
+        date_birth: '',
+        userid: auth.user.id,
     })
 
     const handleAdding = (e) => {
@@ -76,8 +77,8 @@ function Pacientes({ pacientes }) {
                                 className='mx-5 mb-3 rounded-md text-black' 
                                 type="text" 
                                 placeholder='Nombre del paciente' 
-                                id='name' 
-                                name='name'/>
+                                id='namePaciente' 
+                                name='namePaciente'/>
                         </div>
                     </div>
                 }
@@ -203,7 +204,7 @@ function Pacientes({ pacientes }) {
                     <div className='mt-6 shadow-sm rounded-lg divide-y-4 border'>
                         {
                             pacientes.map(paciente =>
-                                    <Paciente key={paciente.id} paciente={paciente}/>
+                                    <Paciente key={paciente.id} paciente={paciente} auth={auth}/>
                                 )
                         }
                     </div>

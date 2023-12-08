@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Paciente;
+use App\Models\Bitacora;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -11,10 +12,11 @@ class PacienteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
         return Inertia::render('Bixer/Pacientes', [
-            'pacientes' => Paciente::with('user:id,name')->latest()->get()
+            //'pacientes' => Paciente::with('user:id,name')->latest()->get()
+            'pacientes' => Paciente::where('user_id', $request->input('user'))->with('user:id,name')->latest()->get()
         ]);
     }
 
@@ -43,6 +45,11 @@ class PacienteController extends Controller
 
         $request->user()->pacientes()->create($validated);
 
+        $bitacora = new Bitacora();
+        $bitacora -> user_id = $request -> userid;
+        $bitacora -> accion = 'Creacion de paciente';
+        $bitacora -> save();
+
         return redirect(route('pacientes.index'));
     }
 
@@ -51,7 +58,7 @@ class PacienteController extends Controller
      */
     public function show(Paciente $paciente)
     {
-        //
+        dd($paciente);
     }
 
     /**
@@ -81,6 +88,11 @@ class PacienteController extends Controller
 
         $paciente->update($validated);
 
+        $bitacora = new Bitacora();
+        $bitacora -> user_id = $request -> userid;
+        $bitacora -> accion = 'Actualizacion de paciente';
+        $bitacora -> save();
+        
         return redirect(route('pacientes.index'));
     }
 
@@ -90,6 +102,11 @@ class PacienteController extends Controller
     public function destroy(Paciente $paciente)
     {
         $this->authorize('delete', $paciente);
+
+        $bitacora = new Bitacora();
+        $bitacora -> user_id = $paciente->user_id;
+        $bitacora -> accion = 'Borrar paciente';
+        $bitacora -> save();
 
         $paciente->delete();
 

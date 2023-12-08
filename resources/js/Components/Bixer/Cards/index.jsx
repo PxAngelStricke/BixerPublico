@@ -1,7 +1,7 @@
 import React from 'react'
 import './Style/css.css'
 
-function Card({ img, text, description, url }) {
+function Card({ img, text, description, url, children, btnText }) {
   return (
     <>
         <div className="card">
@@ -14,7 +14,10 @@ function Card({ img, text, description, url }) {
             <div className="face face2">
                 <div className="content">
                     <p>{description}</p>
-                    <a href={url} type="button" className="rounded-md">Ingresar</a>
+                    <a href={url} type="button" className="rounded-md">
+                        {btnText}
+                        {children}
+                    </a>
                 </div>
             </div>
         </div>

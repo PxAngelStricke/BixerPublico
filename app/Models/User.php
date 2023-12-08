@@ -16,6 +16,10 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Paciente::class);
     }
 
+    public function bitacoras() {
+        return $this->hasMany(Bitacora::class);
+    }
+
     /**
      * The attributes that are mass assignable.
      *
