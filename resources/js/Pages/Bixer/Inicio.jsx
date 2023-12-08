@@ -19,14 +19,7 @@ function Inicio({ auth }) {
       <div className='flex justify-center items-center xl:py-20'>
         <Contenedor>
           <div className='flex flex-col justify-center px-3 items-center lg:flex-row lg:space-x-8'>
-            <Card img='./img/Pacientes.webp' text='Pacientes' description='Gestionar pacientes'>
-              <Link
-                as='button'
-                href={route('pacientes.index', {user: auth.user.id})}
-                >
-                  Ingresar
-              </Link>
-            </Card>
+            <Card img='./img/Pacientes.webp' text='Pacientes' description='Gestionar pacientes' url='pacientes' btnText='Ingresar'/>
             <Card img='./img/Graph.webp' text='Graficador' description='Iniciar un muestreo' url='graficador' btnText='Ingresar'/>
           </div>
         </Contenedor>
