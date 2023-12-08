@@ -20,8 +20,8 @@ function Inicio({ auth }) {
       <div className='flex justify-center items-center xl:py-20'>
         <Contenedor>
           <div className='flex flex-col justify-center px-3 items-center lg:flex-row lg:space-x-8'>
-            <Card img='./img/Pacientes.png' text='Pacientes' description='Gestionar pacientes' url='pacientes'/>
-            <Card img='./img/Graph.png' text='Graficador' description='Iniciar un muestreo' url='graficador'/>
+            <Card img='./img/Pacientes.webp' text='Pacientes' description='Gestionar pacientes' url='pacientes'/>
+            <Card img='./img/Graph.webp' text='Graficador' description='Iniciar un muestreo' url='graficador'/>
           </div>
         </Contenedor>
       </div>

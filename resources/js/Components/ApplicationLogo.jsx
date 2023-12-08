@@ -5,7 +5,7 @@ export default function ApplicationLogo(props) {
         </svg>*/
     return (
         <>
-            <img src="./img/BixerLogo2.png" className="mx-auto w-32 h-32" alt="" />
+            <img src="./img/BixerLogo2.webp" className="mx-auto w-32 h-32" alt="" />
         </>
     );
 }

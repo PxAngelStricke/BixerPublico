@@ -16,7 +16,7 @@ export default function Authenticated({ user, header, children }) {
                         <div className="flex mt-3">
                             <div className="shrink-0 flex items-center">
                                 <Link href="inicio">
-                                    <img src="./img/BixerLogo2.png" className='block h-20 mt-3 w-auto fill-current' alt="" />
+                                    <img src="./img/BixerLogo2.webp" className='block h-20 mt-3 w-auto fill-current' alt="" />
                                 </Link>
                             </div>
                         </div>

@@ -26,7 +26,7 @@ function Login() {
                     <Boton url='inicio' text='Iniciar sesion'/>
                 </form>
                 <p>¿No tienes una cuenta? <a href='registro' className='underline text-[#18ead8]'>Registrate aquí</a></p>
-                <img className='mx-auto w-24 h-24' src="./img/BixerLogo2.png" alt="" />
+                <img className='mx-auto w-24 h-24' src="./img/BixerLogo2.webp" alt="" />
             </Contenedor>
         </main>
     </>
