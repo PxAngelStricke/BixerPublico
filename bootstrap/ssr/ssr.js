@@ -8,6 +8,7 @@ import { jsx, Fragment, jsxs } from "react/jsx-runtime";
 import React, { forwardRef, useRef, useEffect, useState, createContext, useContext, Fragment as Fragment$1 } from "react";
 import { Link, useForm, Head as Head$1, usePage, createInertiaApp } from "@inertiajs/react";
 import pdfMake from "pdfmake/build/pdfmake.js";
+import * as pdfFonts from "pdfmake/build/vfs_fonts.js";
 import { format } from "date-fns";
 import { Line } from "react-chartjs-2";
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler } from "chart.js";
@@ -175,7 +176,12 @@ function Login$1({ status, canResetPassword }) {
     post(route("login"));
   };
   return /* @__PURE__ */ jsxs(Fragment, { children: [
-    /* @__PURE__ */ jsx(Head$1, { title: "Iniciar sesion" }),
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Login" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "La aplicacion web de goniometría Bixer esta destinada a profesionistas y espcialistas con cedula profesional; con el objetivo de proporcionarles una herramienta para maximizar sus precisión al diagnosticar." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "menu, menu principa, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx("main", { className: "flex items-center justify-center h-screen", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold", children: "Iniciar sesión" }),
       /* @__PURE__ */ jsx("p", { children: "Porfavor, ingresa tus datos" }),
@@ -265,6 +271,12 @@ function Register() {
     post(route("register"));
   };
   return /* @__PURE__ */ jsxs(Fragment, { children: [
+    /* @__PURE__ */ jsxs(Head$1, { children: [
+      /* @__PURE__ */ jsx("title", { children: "Software de goniometria: Registro" }),
+      /* @__PURE__ */ jsx("meta", { name: "description", content: "La aplicacion web de goniometría Bixer esta destinada a profesionistas y espcialistas con cedula profesional; con el objetivo de proporcionarles una herramienta para maximizar sus precisión al diagnosticar." }),
+      /* @__PURE__ */ jsx("meta", { name: "keywords", content: "registro, goniometro, goniometría, goniometro digital, fisioterapia, fisioterapeuta, rehabilitacion, graficador" }),
+      /* @__PURE__ */ jsx("meta", { name: "author", content: "byLastLine_" })
+    ] }),
     /* @__PURE__ */ jsx(Head$1, { title: "Registro" }),
     /* @__PURE__ */ jsx("main", { className: "flex items-center justify-center py-5", children: /* @__PURE__ */ jsxs(Contenedor, { children: [
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold", children: "Registro" }),
@@ -523,6 +535,7 @@ const __vite_glob_0_5 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
   __proto__: null,
   default: VerifyEmail
 }, Symbol.toStringTag, { value: "Module" }));
+pdfMake.vfs = pdfFonts && pdfFonts.pdfMake ? pdfFonts.pdfMake.vfs : globalThis.pdfMake.vfs;
 class PDFGenerator extends React.Component {
   constructor() {
     super(...arguments);
@@ -1297,7 +1310,7 @@ function Graficador({ paciente, auth }) {
       /* @__PURE__ */ jsx("h1", { className: "text-4xl font-bold", children: "Graficador" }),
       /* @__PURE__ */ jsx(LinesChart, { ejex, ejey, onChartImageReady: handleChartImageReady }),
       /* @__PURE__ */ jsx(Boton, { onClick: handleBluetoothBtn, text: bluetoothConnected ? "desconectar" : "conectar" }),
-      bluetoothConnected && /* @__PURE__ */ jsxs(Fragment, { children: [
+      !bluetoothConnected && /* @__PURE__ */ jsxs(Fragment, { children: [
         /* @__PURE__ */ jsx(Boton, { onClick: toggleMuestreo, text: muestreoActivo ? "pausar muestreo" : "iniciar muestreo" }),
         /* @__PURE__ */ jsx(Boton, { onClick: eliminarMuestreo, text: "eliminar muestreo" }),
         /* @__PURE__ */ jsxs("form", { action: "", className: "grid gap-4 text-left mt-4", children: [
