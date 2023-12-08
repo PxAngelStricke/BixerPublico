@@ -117,6 +117,7 @@ export default function Register() {
                             value={data.password}
                             autoComplete='new-password'
                             onChange={(e) => setData('password', e.target.value)}
+                            required
                         />
                         <InputError message={errors.password} className='mt-2'/>
                     </div>
@@ -132,6 +133,7 @@ export default function Register() {
                             value={data.password_confirmation}  
                             autoComplete='new-password'
                             onChange={(e) => setData('password_confirmation', e.target.value)}  
+                            required
                         />
                         <InputError message={errors.password_confirmation} className='mt-2'/>
                     </div>
@@ -146,6 +148,9 @@ export default function Register() {
                             name='telefono'
                             value={data.tel}
                             onChange={(e) => setData('telefono', e.target.value)}
+                            pattern="[0-9]{10}"
+                            title="El numero de telefono debe tener 10 digitos"
+                            required
                         />
                         <InputError message={errors.telefono} className='mt-2'/>
                     </div>
@@ -159,6 +164,9 @@ export default function Register() {
                             name='professional_id'
                             value={data.professional_id}
                             onChange={(e) => setData('professional_id', e.target.value)}
+                            pattern="[0-9]{1,8}"
+                            title="El campo solo debe contener números y no puede tener más de 8 caracteres"
+                            required
                         />
                         <InputError message={errors.professional_id} className='mt-2'/>
                     </div>
@@ -172,6 +180,9 @@ export default function Register() {
                             name='specialty'
                             value={data.specialty}
                             onChange={(e) => setData('specialty', e.target.value)}
+                            pattern="{1,}"
+                            title="El campo no puede estar vacio"
+                            required
                         />
                         <InputError message={errors.specialty} className='mt-2'/>
                     </div>

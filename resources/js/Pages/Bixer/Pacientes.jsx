@@ -95,7 +95,11 @@ function Pacientes({ pacientes, auth }) {
                             type="text" 
                             placeholder='Nombre del paciente' 
                             id='name' 
-                            name='name'/>
+                            name='name'
+                            pattern="{1,}"
+                            title="El campo no puede estar vacio"
+                            required
+                            />
                         <InputError className='mb-2' message={errors.name}/>
 
                         <div className='lg:flex'>
@@ -108,7 +112,11 @@ function Pacientes({ pacientes, auth }) {
                                     type="text" 
                                     placeholder='Apellido paterno' 
                                     id='lastname' 
-                                    name='lastname'/>
+                                    name='lastname'
+                                    pattern="{1,}"
+                                    title="El campo no puede estar vacio"
+                                    required
+                                    />
                                 <InputError className='mb-2' message={errors.lastname}/>
                             </div>
 
@@ -121,7 +129,11 @@ function Pacientes({ pacientes, auth }) {
                                     type="text" 
                                     placeholder='Apellido materno' 
                                     id='lastname2' 
-                                    name='lastname2'/>
+                                    name='lastname2'
+                                    pattern="{1,}"
+                                    title="El campo no puede estar vacio"
+                                    required
+                                    />
                                 <InputError className='mb-2' message={errors.lastname2}/>
                             </div>
                         </div>
@@ -135,7 +147,11 @@ function Pacientes({ pacientes, auth }) {
                                 type="text" 
                                 placeholder='CURP' 
                                 id='CURP' 
-                                name='CURP'/>
+                                name='CURP'
+                                pattern="^[A-Z]{4}\d{6}[HM][A-Z]{5}[0-9A-Z]\d$"
+                                title="Ingresa una CURP valida"
+                                required
+                                />
                             <InputError className='mb-2' message={errors.CURP}/>
                         </div>
                         
@@ -148,9 +164,13 @@ function Pacientes({ pacientes, auth }) {
                                     onChange={e => setData('weight', e.target.value)}
                                     className='mx-5 mb-3 rounded-md text-black' 
                                     type="text" 
-                                    placeholder='Peso del paciente' 
+                                    placeholder='Peso del paciente (kg)' 
                                     id='weight' 
-                                    name='weight'/>
+                                    name='weight'
+                                    pattern="[0-9]{1,3}"
+                                    title="El campo no puede estar vacio"
+                                    required
+                                    />
                                 <InputError className='mb-2' message={errors.weight}/>
                             </div>
 
@@ -161,9 +181,13 @@ function Pacientes({ pacientes, auth }) {
                                     onChange={e => setData('height', e.target.value)}
                                     className='mx-5 mb-3 rounded-md text-black' 
                                     type="text" 
-                                    placeholder='Altura del paciente' 
+                                    placeholder='Altura del paciente (cm)' 
                                     id='height' 
-                                    name='height'/>
+                                    name='height'
+                                    pattern="[0-9]{1,3}"
+                                    title="El campo no puede estar vacio"
+                                    required
+                                    />
                                 <InputError className='mb-2' message={errors.height}/>
                             </div>
 
@@ -180,6 +204,8 @@ function Pacientes({ pacientes, auth }) {
                                     showYearDropdown
                                     dropdownMode='select'
                                     className='mx-5 mb-3 rounded-md text-black lg:w-[85%] w-[88%]'
+                                    title="Porfavor selecciona una fecha"
+                                    required
                                 />
                                 <input type="text" className='text-black hidden' name='date_birth' id='date_birth' onChange={e => setDateString(e.target.value)}  value={dateString}/>
                                 <InputError className='mb-2' message={errors.date_birth}/>

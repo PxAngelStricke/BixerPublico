@@ -165,7 +165,7 @@ function Graficador({paciente, auth}) {
             <Boton onClick={handleBluetoothBtn} text={bluetoothConnected ? 'desconectar' : 'conectar'}/>
 
             {
-                bluetoothConnected && (
+                !bluetoothConnected && (
                     <>
                         <Boton onClick={toggleMuestreo} text={muestreoActivo ? 'pausar muestreo' : 'iniciar muestreo'}/>
                         <Boton onClick={eliminarMuestreo} text='eliminar muestreo'/>
@@ -180,7 +180,11 @@ function Graficador({paciente, auth}) {
                                     type="text" 
                                     placeholder='Padecimientos del paciente' 
                                     id='suffering' 
-                                    name='suffering'/>
+                                    name='suffering'
+                                    pattern="{1,}"
+                                    title="El campo no puede estar vacio"
+                                    required
+                                    />
                                 <InputError className='mb-2'/>
                             </div>
 
@@ -193,12 +197,18 @@ function Graficador({paciente, auth}) {
                                     placeholder='Ingrese observaciones importantes del paciente' 
                                     name="observations" 
                                     id="observations" 
-                                    rows="5"></textarea>
+                                    rows="11"
+                                    pattern="{1,}"
+                                    title="El campo no puede estar vacio"
+                                    style={{ resize: 'none' }} 
+                                    required
+                                    ></textarea>
                                 <InputError className='mb-2'/>
                             </div>
+                            { contenido }
                         </form>
                     
-                        { contenido }
+                        
                     </>
                 )
             }
