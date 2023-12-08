@@ -165,7 +165,7 @@ function Graficador({paciente, auth}) {
             <Boton onClick={handleBluetoothBtn} text={bluetoothConnected ? 'desconectar' : 'conectar'}/>
 
             {
-                !bluetoothConnected && (
+                bluetoothConnected && (
                     <>
                         <Boton onClick={toggleMuestreo} text={muestreoActivo ? 'pausar muestreo' : 'iniciar muestreo'}/>
                         <Boton onClick={eliminarMuestreo} text='eliminar muestreo'/>
